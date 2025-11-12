@@ -131,6 +131,7 @@ async def stats(ctx):
     hp_total = 0
     raras = 0
     poder_total = 0
+    print(inventario[user_id].items())
 
     for rareza, cartas in inventario[user_id].items():
         total += len(cartas)
@@ -146,7 +147,8 @@ async def stats(ctx):
 
     promedio_hp = hp_total // total if total else 0
 
-    embed = discord.Embed(title=f"📊 Estadísticas de {ctx.author.name}", color=discord.Color.purple)
+    embed = discord.Embed(title=f"📊 Estadísticas de {ctx.author.name}", color=discord.Color.purple())
+    
     embed.add_field(name="Total cartas", value=str(total))
     embed.add_field(name="Cartas raras", value=str(raras))
     embed.add_field(name="Promedio HP", value=str(promedio_hp))
@@ -174,7 +176,7 @@ async def ranking(ctx):
         except:
             texto += f"{i}. Usuario eliminado - {raras} cartas raras\n"
 
-    embed = discord.Embed(title="🏆 Ranking cartas raras", description=texto or "Aún no hay jugadores", color=discord.Color.gold)
+    embed = discord.Embed(title="🏆 Ranking cartas raras", description=texto or "Aún no hay jugadores", color=discord.Color.gold())
     await ctx.send(embed=embed)
 
 # -----------------------------
