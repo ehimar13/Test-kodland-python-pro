@@ -13,7 +13,7 @@ En este repositorio se encuentra el proyecto / bot que le permite al usuario esc
 4. Instala los requerimientos necesarios con:
     pip install -r requirements.txt
 6. Configura el archivo config.py con tu token de Discord: python TOKEN = "escribe_tu_token" (se obtiene de la pagian de discord developer https://discord.com/developers/applications)
-7. Ejecuta el bot con:  python main.py
+7. Ejecuta el bot con:  python main.py   o con python3 main.py
 
 ## Comandos del bot.
 se configuro para que los comandos funcionen de esta forma !comando  
